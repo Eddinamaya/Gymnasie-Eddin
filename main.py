@@ -1,18 +1,22 @@
-import pygame
+import pygame, sys
 from button import Button
 from obstacle import *
 from player import *
+import time
 
 pygame.init()
 
-clock = pygame.time.Clock()
-fps = 60
 SCREEN = pygame.display.set_mode((1280, 720))
 pygame.display.set_caption("moto sport")
 
 menubackground = pygame.image.load("assets/mainmenubackground.png")
 playbackground = pygame.image.load("assets/playbackground.png")
 
+clock = pygame.time.Clock()
+#current_time = 0
+#print("start")
+#button_press_time = 0
+#print("button")
 
 def get_font(size):  # Returns Press-Start-2P in the desired size
     return pygame.font.Font("assets/font.ttf", size)
@@ -20,16 +24,13 @@ def get_font(size):  # Returns Press-Start-2P in the desired size
 
 def play():
     while True:
-        # Setting the framerate to 60fps
-        clock.tick(fps)
         SCREEN.blit(playbackground, (0, 0))
-        # Updating the display surface
         Obstacle.update()
         Player.update()
         pygame.display.update()
         collide = pygame.Rect.colliderect(Player.rect, Obstacle.rect)
-        # If the objects are colliding
-        # then changing the y coordinate
+        PLAY_MOUSE_POS = pygame.mouse.get_pos()
+
         if collide:
             Obstacle.rect.bottom = Player.rect.top
             Player.back()
@@ -39,10 +40,16 @@ def play():
             if event.type == pygame.QUIT:
                 pygame.quit()
 
-        PLAY_MOUSE_POS = pygame.mouse.get_pos()
+
+        #current_time = pygame.time.get_ticks()
+        #print(current_time)
+
+        #if current_time - button_press_time > 3000:
+            #print("now")
+
 
         pygame.display.update()
-
+        clock.tick(60)
 
 def options():
     while True:
