@@ -12,10 +12,18 @@ pygame.display.set_caption("moto sport")
 menubackground = pygame.image.load("assets/mainmenubackground.png")
 playbackground = pygame.image.load("assets/playbackground.png")
 
+# frames per second for play
 clock = pygame.time.Clock()
-#current_time = 0
-#print("start")
-#button_press_time = 0
+fps = 60
+
+# the score
+#font = pygame.font.Font("assets/font.ttf", 20)
+#score = 0
+#black = (0, 0, 0)
+
+#global current_time
+
+#start_time = 0
 #print("button")
 
 def get_font(size):  # Returns Press-Start-2P in the desired size
@@ -25,8 +33,11 @@ def get_font(size):  # Returns Press-Start-2P in the desired size
 def play():
     while True:
         SCREEN.blit(playbackground, (0, 0))
+        clock.tick(fps)
+
         Obstacle.update()
         Player.update()
+
         pygame.display.update()
         collide = pygame.Rect.colliderect(Player.rect, Obstacle.rect)
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
@@ -40,16 +51,19 @@ def play():
             if event.type == pygame.QUIT:
                 pygame.quit()
 
+        #global score
 
+        #global current_time
         #current_time = pygame.time.get_ticks()
         #print(current_time)
 
-        #if current_time - button_press_time > 3000:
-            #print("now")
+        #if current_time - start_time > 5000:
+            #current_time = 0
+           # print("helo")
 
 
-        pygame.display.update()
-        clock.tick(60)
+
+        #pygame.display.update()
 
 def options():
     while True:

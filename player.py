@@ -31,13 +31,13 @@ class Player():
 
         key = pygame.key.get_pressed()
         if key[pygame.K_UP]:
-            dy -= 10
+            dy -= 15
         if key[pygame.K_DOWN]:
-            dy += 10
+            dy += 15
         if key[pygame.K_LEFT]:
-            dx -= 10
+            dx -= 15
         if key[pygame.K_RIGHT]:
-            dx += 10
+            dx += 15
 
         self.rect.x += dx
         self.rect.y += dy

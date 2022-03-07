@@ -1,19 +1,19 @@
 import pygame
 import random
 import time
-
 # variables for obstacle
 x2 = 80
 y2 = 80
 screen_height = 720
 screen_width = 1280
 screen = pygame.display.set_mode((screen_width, screen_height))
+# object speed variables
 
-#clock = pygame.time.Clock()
-#current_time = 0
-#print("start")
-#button_press_time = 0
-#print("button")
+dy = 10
+dx = 0
+
+#pygame.time.set_timer(time, 1000)
+
 
 class Obstacle():
 
@@ -28,11 +28,8 @@ class Obstacle():
         # ändring
     def update(Kam):
 
-        # if current_time - button_press_time > 2000:
-        # print("now")
-
-        dx = 0
-        dy = 6
+        global dy
+        global dx
 
         Kam.rect.x += dx
         Kam.rect.y += dy
@@ -41,11 +38,15 @@ class Obstacle():
 
         if Kam.rect.top > 720:
             Kam.rect.top = 0
+            dy += 3
+
 
         if Kam.rect.top == 0:
             Kam.rect.right = number
+
 
         screen.blit(Kam.image, Kam.rect)
 
 
 Obstacle = Obstacle(x2, y2)
+
