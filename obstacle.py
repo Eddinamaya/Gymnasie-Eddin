@@ -25,6 +25,12 @@ class Obstacle():
         Kam.rect.y = y
         Kam.startt = 5
 
+    def back_obsticle(Kam):
+        global dy
+        global dx
+        dy = 10
+        dx = 0
+
         # ändring
     def update(Kam):
 

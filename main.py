@@ -16,15 +16,6 @@ playbackground = pygame.image.load("assets/playbackground.png")
 clock = pygame.time.Clock()
 fps = 60
 
-# the score
-#font = pygame.font.Font("assets/font.ttf", 20)
-#score = 0
-#black = (0, 0, 0)
-
-#global current_time
-
-#start_time = 0
-#print("button")
 
 def get_font(size):  # Returns Press-Start-2P in the desired size
     return pygame.font.Font("assets/font.ttf", size)
@@ -45,25 +36,14 @@ def play():
         if collide:
             Obstacle.rect.bottom = Player.rect.top
             Player.back()
+            Obstacle.back_obsticle()
             restart_menu()
+
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
 
-        #global score
-
-        #global current_time
-        #current_time = pygame.time.get_ticks()
-        #print(current_time)
-
-        #if current_time - start_time > 5000:
-            #current_time = 0
-           # print("helo")
-
-
-
-        #pygame.display.update()
 
 def options():
     while True:
