@@ -5,6 +5,7 @@ import random
 x1 = 500
 y1 = 500
 
+# screen size
 screen_height = 720
 screen_width = 1280
 screen = pygame.display.set_mode((screen_width, screen_height))
@@ -19,9 +20,7 @@ class Player():
         self.rect.x = x
         self.rect.y = y
 
-        # ändring
-        # get keypresses
-    def back(self):
+    def reset_boat_position(self):
         self.rect.x = 500
         self.rect.y = 500
 
@@ -39,6 +38,7 @@ class Player():
         if key[pygame.K_RIGHT]:
             dx += 15
 
+        # update player coordinates
         self.rect.x += dx
         self.rect.y += dy
 
@@ -55,6 +55,5 @@ class Player():
             self.rect.top = 0
 
         screen.blit(self.image, self.rect)
-
 
 Player = Player(x1, y1)

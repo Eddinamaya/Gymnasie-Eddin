@@ -6,13 +6,15 @@ import time
 
 pygame.init()
 
+# Screensize
 SCREEN = pygame.display.set_mode((1280, 720))
 pygame.display.set_caption("moto sport")
 
+# Screen-images
 menubackground = pygame.image.load("assets/mainmenubackground.png")
 playbackground = pygame.image.load("assets/playbackground.png")
 
-# frames per second for play
+# Frames per second for play
 clock = pygame.time.Clock()
 fps = 60
 
@@ -27,18 +29,34 @@ def play():
         clock.tick(fps)
 
         Obstacle.update()
+        Obstacle2.update()
         Player.update()
 
         pygame.display.update()
         collide = pygame.Rect.colliderect(Player.rect, Obstacle.rect)
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
 
-        if collide:
-            Obstacle.rect.bottom = Player.rect.top
-            Player.back()
-            Obstacle.back_obsticle()
+        # Check for collision in x direction
+        if Obstacle.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.obsticle_speed_reset()
             restart_menu()
 
+        # Check for collision in y direction
+        if Obstacle.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.obsticle_speed_reset()
+            restart_menu()
+
+        if Obstacle2.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle2.obsticle2_speed_reset()
+            restart_menu()
+
+        if Obstacle2.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle2.obsticle2_speed_reset()
+            restart_menu()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -109,14 +127,12 @@ def main_menu():
 
         pygame.display.update()
 
+
 def restart_menu():
     while True:
         SCREEN.blit(menubackground, (0, 0))
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
-
-       #MENU_TEXT = get_font(100).render("MAIN MENU", True, "#b68f40")
-        #MENU_RECT = MENU_TEXT.get_rect(center=(640, 100))
 
         RESTART_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(640, 180),
                              text_input="RESTART", font=get_font(50), base_color="#d7fcd4", hovering_color="White")
@@ -124,8 +140,6 @@ def restart_menu():
                              text_input="MAIN MENU", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
         QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(640, 500),
                              text_input="QUIT", font=get_font(50), base_color="#d7fcd4", hovering_color="White")
-
-        #SCREEN.blit(MENU_TEXT, MENU_RECT)
 
         for button in [RESTART_BUTTON, QUIT_BUTTON, MAIN_MENU]:
             button.changeColor(MENU_MOUSE_POS)
