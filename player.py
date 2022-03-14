@@ -7,7 +7,7 @@ y1 = 500
 
 # screen size
 screen_height = 720
-screen_width = 1280
+screen_width = 900
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 class Player():

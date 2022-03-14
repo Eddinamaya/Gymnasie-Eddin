@@ -7,7 +7,7 @@ import time
 pygame.init()
 
 # Screensize
-SCREEN = pygame.display.set_mode((1280, 720))
+SCREEN = pygame.display.set_mode((900, 720))
 pygame.display.set_caption("moto sport")
 
 # Screen-images
@@ -30,6 +30,13 @@ def play():
 
         Obstacle.update()
         Obstacle2.update()
+        Obstacle3.update()
+        Obstacle4.update()
+        Obstacle5.update()
+        Obstacle6.update()
+        Obstacle7.update()
+        Obstacle8.update()
+        Obstacle9.update()
         Player.update()
 
         pygame.display.update()
@@ -39,23 +46,255 @@ def play():
         # Check for collision in x direction
         if Obstacle.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
             Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
             Obstacle.obsticle_speed_reset()
             restart_menu()
 
         # Check for collision in y direction
         if Obstacle.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
             Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
             Obstacle.obsticle_speed_reset()
             restart_menu()
 
         if Obstacle2.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
             Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
             Obstacle2.obsticle2_speed_reset()
             restart_menu()
 
         if Obstacle2.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
             Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
             Obstacle2.obsticle2_speed_reset()
+            restart_menu()
+
+        if Obstacle3.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle3.obsticle3_speed_reset()
+            restart_menu()
+
+        if Obstacle3.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle3.obsticle3_speed_reset()
+            restart_menu()
+
+        if Obstacle4.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle4.obsticle4_speed_reset()
+            restart_menu()
+
+        if Obstacle4.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle4.obsticle4_speed_reset()
+            restart_menu()
+
+        if Obstacle5.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle5.obsticle5_speed_reset()
+            restart_menu()
+
+        if Obstacle5.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle5.obsticle5_speed_reset()
+            restart_menu()
+
+        if Obstacle6.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle6.obsticle6_speed_reset()
+            restart_menu()
+
+        if Obstacle6.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle6.obsticle6_speed_reset()
+            restart_menu()
+
+        if Obstacle7.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle7.obsticle7_speed_reset()
+            restart_menu()
+
+        if Obstacle7.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle7.obsticle7_speed_reset()
+            restart_menu()
+
+        if Obstacle8.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle8.obsticle8_speed_reset()
+            restart_menu()
+
+        if Obstacle8.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle8.obsticle8_speed_reset()
+            restart_menu()
+
+        if Obstacle9.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle9.obsticle9_speed_reset()
+            restart_menu()
+
+        if Obstacle9.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
+            Player.reset_boat_position()
+            Obstacle.reset_Obstacle_position()
+            Obstacle2.reset_Obstacle2_position()
+            Obstacle3.reset_Obstacle3_position()
+            Obstacle4.reset_Obstacle4_position()
+            Obstacle5.reset_Obstacle5_position()
+            Obstacle6.reset_Obstacle6_position()
+            Obstacle7.reset_Obstacle7_position()
+            Obstacle8.reset_Obstacle8_position()
+            Obstacle9.reset_Obstacle9_position()
+            Obstacle9.obsticle9_speed_reset()
             restart_menu()
 
         for event in pygame.event.get():
@@ -70,10 +309,10 @@ def options():
         SCREEN.fill("white")
 
         OPTIONS_TEXT = get_font(45).render("This is the OPTIONS screen.", True, "Black")
-        OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(640, 260))
+        OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(450, 260))
         SCREEN.blit(OPTIONS_TEXT, OPTIONS_RECT)
 
-        OPTIONS_BACK = Button(image=None, pos=(640, 460),
+        OPTIONS_BACK = Button(image=None, pos=(450, 460),
                               text_input="BACK", font=get_font(75), base_color="Black", hovering_color="Green")
 
         OPTIONS_BACK.changeColor(OPTIONS_MOUSE_POS)
@@ -96,14 +335,14 @@ def main_menu():
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        MENU_TEXT = get_font(100).render("MAIN MENU", True, "#b68f40")
-        MENU_RECT = MENU_TEXT.get_rect(center=(640, 100))
+        MENU_TEXT = get_font(90).render("MAIN MENU", True, "#b68f40")
+        MENU_RECT = MENU_TEXT.get_rect(center=(450, 100))
 
-        PLAY_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(640, 250),
+        PLAY_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(450, 250),
                              text_input="PLAY", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
-        OPTIONS_BUTTON = Button(image=pygame.image.load("assets/Options Rect.png"), pos=(640, 400),
+        OPTIONS_BUTTON = Button(image=pygame.image.load("assets/Options Rect.png"), pos=(450, 400),
                                 text_input="OPTIONS", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
-        QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(640, 550),
+        QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(450, 550),
                              text_input="QUIT", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
 
         SCREEN.blit(MENU_TEXT, MENU_RECT)
@@ -134,11 +373,11 @@ def restart_menu():
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        RESTART_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(640, 180),
+        RESTART_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(450, 180),
                              text_input="RESTART", font=get_font(50), base_color="#d7fcd4", hovering_color="White")
-        MAIN_MENU = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(640, 340),
+        MAIN_MENU = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(450, 340),
                              text_input="MAIN MENU", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
-        QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(640, 500),
+        QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(450, 500),
                              text_input="QUIT", font=get_font(50), base_color="#d7fcd4", hovering_color="White")
 
         for button in [RESTART_BUTTON, QUIT_BUTTON, MAIN_MENU]:
