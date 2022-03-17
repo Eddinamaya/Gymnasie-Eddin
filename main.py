@@ -1,4 +1,6 @@
 import pygame, sys
+import pygame.image
+
 from button import Button
 from obstacle import *
 from player import *
@@ -13,6 +15,8 @@ pygame.display.set_caption("moto sport")
 # Screen-images
 menubackground = pygame.image.load("assets/mainmenubackground.png")
 playbackground = pygame.image.load("assets/playbackground.png")
+restartmenu = pygame.image.load("assets/Gameover.jpg")
+restartmenu = pygame.transform.scale(restartmenu, (400, 300))
 
 # Frames per second for play
 clock = pygame.time.Clock()
@@ -369,18 +373,19 @@ def main_menu():
 
 def restart_menu():
     while True:
-        SCREEN.blit(menubackground, (0, 0))
+        screen.fill((0, 0, 0))
+        SCREEN.blit(restartmenu, (250, 100))
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        RESTART_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(450, 180),
-                             text_input="RESTART", font=get_font(50), base_color="#d7fcd4", hovering_color="White")
-        MAIN_MENU = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(450, 340),
+        RESTART_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(450, 450),
+                             text_input="RESTART", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
+        MAIN_MENU = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(450, 600),
                              text_input="MAIN MENU", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
-        QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(450, 500),
-                             text_input="QUIT", font=get_font(50), base_color="#d7fcd4", hovering_color="White")
+        #QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(450, 100),
+                            # text_input="QUIT", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
 
-        for button in [RESTART_BUTTON, QUIT_BUTTON, MAIN_MENU]:
+        for button in [RESTART_BUTTON, MAIN_MENU]:
             button.changeColor(MENU_MOUSE_POS)
             button.update(SCREEN)
 
@@ -391,9 +396,9 @@ def restart_menu():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if RESTART_BUTTON.checkForInput(MENU_MOUSE_POS):
                     play()
-                if QUIT_BUTTON.checkForInput(MENU_MOUSE_POS):
-                    pygame.quit()
-                    sys.exit()
+                #if QUIT_BUTTON.checkForInput(MENU_MOUSE_POS):
+                    #pygame.quit()
+                   # sys.exit()
                 if MAIN_MENU.checkForInput(MENU_MOUSE_POS):
                     main_menu()
 
