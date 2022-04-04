@@ -22,7 +22,6 @@ restartmenu = pygame.transform.scale(restartmenu, (400, 300))
 clock = pygame.time.Clock()
 fps = 60
 
-
 def get_font(size):  # Returns Press-Start-2P in the desired size
     return pygame.font.Font("assets/font.ttf", size)
 
