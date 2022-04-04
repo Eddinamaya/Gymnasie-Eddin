@@ -36,7 +36,7 @@ screen_width = 900
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 # The speed variables of the obstacles
-dy = 4
+dy = 2
 dx = 0
 
 

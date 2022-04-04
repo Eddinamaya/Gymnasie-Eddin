@@ -11,7 +11,7 @@ font_type = pygame.font.match_font("font.ttf")
 textX = 10
 textY = 10
 
-def shoescore(x, y):
+def showescore(x, y):
 
     score_text = font.render("Score :" + str(score_value), True, (255,255,255))
     screen.blit(score, (x, y))
