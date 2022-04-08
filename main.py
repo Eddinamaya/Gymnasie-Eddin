@@ -13,7 +13,7 @@ SCREEN = pygame.display.set_mode((900, 720))
 pygame.display.set_caption("moto sport")
 
 # Screen-images
-menubackground = pygame.image.load("assets/mainmenubackgroundgir .png")
+menubackground = pygame.image.load("assets/mainmenubackground.png")
 playbackground = pygame.image.load("assets/Finalbackground.png")
 playbackground = pygame.transform.scale(playbackground, (900, 720))
 restartmenu = pygame.image.load("assets/Gameover.jpg")
@@ -312,11 +312,13 @@ def options():
 
         SCREEN.fill("white")
 
-        OPTIONS_TEXT = get_font(45).render("This is the OPTIONS screen.", True, "Black")
-        OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(450, 260))
+        OPTIONS_TEXT = get_font(60).render("How To Play", True, "Black")
+        OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(460, 100))
         SCREEN.blit(OPTIONS_TEXT, OPTIONS_RECT)
 
-        OPTIONS_BACK = Button(image=None, pos=(450, 460),
+        #Bild på pilarna här
+
+        OPTIONS_BACK = Button(image=None, pos=(460, 600),
                               text_input="BACK", font=get_font(75), base_color="Black", hovering_color="Green")
 
         OPTIONS_BACK.changeColor(OPTIONS_MOUSE_POS)
