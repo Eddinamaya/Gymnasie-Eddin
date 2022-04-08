@@ -13,8 +13,9 @@ SCREEN = pygame.display.set_mode((900, 720))
 pygame.display.set_caption("moto sport")
 
 # Screen-images
-menubackground = pygame.image.load("assets/mainmenubackground.png")
-playbackground = pygame.image.load("assets/playbackground.png")
+menubackground = pygame.image.load("assets/mainmenubackgroundgir .png")
+playbackground = pygame.image.load("assets/Finalbackground.png")
+playbackground = pygame.transform.scale(playbackground, (900, 720))
 restartmenu = pygame.image.load("assets/Gameover.jpg")
 restartmenu = pygame.transform.scale(restartmenu, (400, 300))
 
