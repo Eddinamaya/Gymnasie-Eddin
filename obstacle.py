@@ -39,6 +39,10 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 dy = 2
 dx = 0
 
+score = 0
+
+def get_font(size):  # Returns Press-Start-2P in the desired size
+    return pygame.font.Font("assets/font.ttf", size)
 
 class Obstacle():
 
@@ -60,10 +64,15 @@ class Obstacle():
         Kam.rect.x = 100
         Kam.rect.y = -50
 
+    def reset_score(Kam):
+        global score
+        score = 0
+
     def update(Kam):
 
         global dy
         global dx
+        global score
 
         Kam.rect.x += dx
         Kam.rect.y += dy
@@ -73,11 +82,16 @@ class Obstacle():
         if Kam.rect.top > 720:
             Kam.rect.top = 0
             dy += 0.1
+            score = score + 1
+            print(score)
 
         if Kam.rect.top == 0:
             Kam.rect.right = number
 
         screen.blit(Kam.image, Kam.rect)
+        SCORE_TEXT = get_font(20).render("SCORE:" + str(score), True, "Black")
+        SCORE_RECT = SCORE_TEXT.get_rect(center=(100, 40))
+        screen.blit(SCORE_TEXT, SCORE_RECT)
 
 
 Obstacle = Obstacle(x2, y2)
