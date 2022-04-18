@@ -60,7 +60,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle.obsticle_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         # Check for collision in y direction
@@ -76,7 +75,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle.obsticle_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle2.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
@@ -91,7 +89,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle2.obsticle2_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle2.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
@@ -106,7 +103,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle2.obsticle2_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle3.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
@@ -121,7 +117,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle3.obsticle3_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle3.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
@@ -136,7 +131,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle3.obsticle3_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle4.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
@@ -151,7 +145,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle4.obsticle4_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle4.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
@@ -166,7 +159,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle4.obsticle4_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle5.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
@@ -181,7 +173,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle5.obsticle5_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle5.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
@@ -196,7 +187,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle5.obsticle5_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle6.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
@@ -211,7 +201,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle6.obsticle6_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle6.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
@@ -226,7 +215,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle6.obsticle6_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle7.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
@@ -241,7 +229,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle7.obsticle7_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle7.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
@@ -256,7 +243,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle7.obsticle7_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle8.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
@@ -271,7 +257,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle8.obsticle8_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle8.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
@@ -286,7 +271,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle8.obsticle8_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle9.rect.colliderect(Player.rect.x + dx, Player.rect.y, Player.width, Player.height):
@@ -301,7 +285,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle9.obsticle9_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         if Obstacle9.rect.colliderect(Player.rect.x, Player.rect.y + dy, Player.width, Player.height):
@@ -316,7 +299,6 @@ def play():
             Obstacle8.reset_Obstacle8_position()
             Obstacle9.reset_Obstacle9_position()
             Obstacle9.obsticle9_speed_reset()
-            Obstacle.reset_score()
             restart_menu()
 
         for event in pygame.event.get():
@@ -410,6 +392,11 @@ def restart_menu():
         #QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(450, 100),
                             # text_input="QUIT", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
 
+        #Obstacle.update(score)
+        SCORE_TEXT = get_font(20).render("SCORE:" + str(score), True, "White")
+        SCORE_RECT = SCORE_TEXT.get_rect(center=(100, 40))
+        screen.blit(SCORE_TEXT, SCORE_RECT)
+
         for button in [RESTART_BUTTON, MAIN_MENU]:
             button.changeColor(MENU_MOUSE_POS)
             button.update(SCREEN)
@@ -420,12 +407,14 @@ def restart_menu():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if RESTART_BUTTON.checkForInput(MENU_MOUSE_POS):
+                    Obstacle.reset_score()
                     play()
                 #if QUIT_BUTTON.checkForInput(MENU_MOUSE_POS):
                     #pygame.quit()
                    # sys.exit()
                 if MAIN_MENU.checkForInput(MENU_MOUSE_POS):
                     main_menu()
+                    Obstacle.reset_score()
 
         pygame.display.update()
 
