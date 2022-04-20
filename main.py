@@ -318,8 +318,8 @@ def options():
         OPTIONS_TEXT = get_font(60).render("How To Play", True, "Black")
         OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(460, 100))
 #=======
-        OPTIONS_TEXT = get_font(45).render("Noih", True, "Black")
-        OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(450, 260))
+        OPTIONS_TEXT = get_font(60).render("How To Play", True, "Black")
+        OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(450, 100))
 #>>>>>>> fc7305deafe0ec168b1a2dbda220c447da65c405
         SCREEN.blit(OPTIONS_TEXT, OPTIONS_RECT)
 
