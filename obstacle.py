@@ -89,7 +89,10 @@ class Obstacle():
             Kam.rect.right = number
 
         screen.blit(Kam.image, Kam.rect)
-        SCORE_TEXT = get_font(20).render("SCORE:" + str(score), True, "Black")
+
+    def score_display(Kam):
+
+        SCORE_TEXT = get_font(20).render("SCORE:" + str(score), True, "White")
         SCORE_RECT = SCORE_TEXT.get_rect(center=(100, 40))
         screen.blit(SCORE_TEXT, SCORE_RECT)
 

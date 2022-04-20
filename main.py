@@ -1,6 +1,7 @@
 import pygame, sys
 import pygame.image
 
+import obstacle
 from button import Button
 from obstacle import *
 from player import *
@@ -32,6 +33,7 @@ def play():
         SCREEN.blit(playbackground, (0, 0))
         clock.tick(fps)
 
+        Obstacle.score_display()
         Obstacle.update()
         Obstacle2.update()
         Obstacle3.update()
@@ -381,7 +383,10 @@ def main_menu():
 def restart_menu():
     while True:
         screen.fill((0, 0, 0))
-        SCREEN.blit(restartmenu, (250, 100))
+        SCREEN.blit(restartmenu, (250, 50))
+        Obstacle.score_display(SCORE_TEXT)
+        SCORE_RECT = SCORE_TEXT.get_rect(center=(400, 40))
+        screen.blit(SCORE_TEXT, SCORE_RECT)
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
@@ -392,10 +397,6 @@ def restart_menu():
         #QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(450, 100),
                             # text_input="QUIT", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
 
-        #Obstacle.update(score)
-        SCORE_TEXT = get_font(20).render("SCORE:" + str(score), True, "White")
-        SCORE_RECT = SCORE_TEXT.get_rect(center=(100, 40))
-        screen.blit(SCORE_TEXT, SCORE_RECT)
 
         for button in [RESTART_BUTTON, MAIN_MENU]:
             button.changeColor(MENU_MOUSE_POS)
@@ -413,8 +414,9 @@ def restart_menu():
                     #pygame.quit()
                    # sys.exit()
                 if MAIN_MENU.checkForInput(MENU_MOUSE_POS):
-                    main_menu()
                     Obstacle.reset_score()
+                    main_menu()
+
 
         pygame.display.update()
 
