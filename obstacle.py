@@ -44,6 +44,17 @@ score = 0
 def get_font(size):  # Returns Press-Start-2P in the desired size
     return pygame.font.Font("assets/font.ttf", size)
 
+
+
+def score_displaymenu():
+    global score
+
+    SCORE_TEXT = get_font(45).render("SCORE:" + str(score), True, "White")
+    SCORE_RECT = SCORE_TEXT.get_rect(center=(450, 350))
+    screen.blit(SCORE_TEXT, SCORE_RECT)
+
+
+
 class Obstacle():
 
     def __init__(Kam, x, y):
@@ -95,6 +106,7 @@ class Obstacle():
         SCORE_TEXT = get_font(20).render("SCORE:" + str(score), True, "White")
         SCORE_RECT = SCORE_TEXT.get_rect(center=(100, 40))
         screen.blit(SCORE_TEXT, SCORE_RECT)
+
 
 
 Obstacle = Obstacle(x2, y2)

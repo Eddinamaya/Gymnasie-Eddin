@@ -348,13 +348,13 @@ def main_menu():
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        MENU_TEXT = get_font(90).render("MAIN MENU", True, "#b68f40")
+        MENU_TEXT = get_font(80).render("MOTO Sport", True, "#b68f40")
         MENU_RECT = MENU_TEXT.get_rect(center=(450, 100))
 
         PLAY_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(450, 250),
                              text_input="PLAY", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
         OPTIONS_BUTTON = Button(image=pygame.image.load("assets/Options Rect.png"), pos=(450, 400),
-                                text_input="How to Play", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
+                                text_input="How to Play", font=get_font(50), base_color="#d7fcd4", hovering_color="White")
         QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(450, 550),
                              text_input="QUIT", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
 
@@ -384,9 +384,7 @@ def restart_menu():
     while True:
         screen.fill((0, 0, 0))
         SCREEN.blit(restartmenu, (250, 50))
-        Obstacle.score_display(SCORE_TEXT)
-        SCORE_RECT = SCORE_TEXT.get_rect(center=(400, 40))
-        screen.blit(SCORE_TEXT, SCORE_RECT)
+        obstacle.score_displaymenu()
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
@@ -394,9 +392,6 @@ def restart_menu():
                              text_input="RESTART", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
         MAIN_MENU = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(450, 600),
                              text_input="MAIN MENU", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
-        #QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(450, 100),
-                            # text_input="QUIT", font=get_font(40), base_color="#d7fcd4", hovering_color="White")
-
 
         for button in [RESTART_BUTTON, MAIN_MENU]:
             button.changeColor(MENU_MOUSE_POS)
@@ -410,9 +405,7 @@ def restart_menu():
                 if RESTART_BUTTON.checkForInput(MENU_MOUSE_POS):
                     Obstacle.reset_score()
                     play()
-                #if QUIT_BUTTON.checkForInput(MENU_MOUSE_POS):
-                    #pygame.quit()
-                   # sys.exit()
+
                 if MAIN_MENU.checkForInput(MENU_MOUSE_POS):
                     Obstacle.reset_score()
                     main_menu()
