@@ -92,7 +92,7 @@ class Obstacle():
 
         if Kam.rect.top > 720:
             Kam.rect.top = 0
-            dy += 0.1
+            dy += 0.05
             score = score + 1
             print(score)
 
@@ -145,7 +145,7 @@ class Obstacle2():
 
         if Ham.rect.top > 720:
             Ham.rect.top = 0
-            dy += 0.1
+            dy += 0.05
 
         if Ham.rect.top == 0:
             Ham.rect.right = number
@@ -189,7 +189,7 @@ class Obstacle3():
 
         if Dam.rect.top > 720:
             Dam.rect.top = 0
-            dy += 0.1
+            dy += 0.05
 
         if Dam.rect.top == 0:
             Dam.rect.right = number
@@ -233,7 +233,7 @@ class Obstacle4():
 
         if Dam1.rect.top > 720:
             Dam1.rect.top = 0
-            dy += 0.1
+            dy += 0.05
 
         if Dam1.rect.top == 0:
             Dam1.rect.right = number
@@ -277,7 +277,7 @@ class Obstacle5():
 
         if Dam2.rect.top > 720:
             Dam2.rect.top = 0
-            dy += 0.1
+            dy += 0.05
 
         if Dam2.rect.top == 0:
             Dam2.rect.right = number
@@ -321,7 +321,7 @@ class Obstacle6():
 
         if Dam3.rect.top > 720:
             Dam3.rect.top = 0
-            dy += 0.1
+            dy += 0.05
 
         if Dam3.rect.top == 0:
             Dam3.rect.right = number
@@ -365,7 +365,7 @@ class Obstacle7():
 
         if Dam4.rect.top > 720:
             Dam4.rect.top = 0
-            dy += 0.1
+            dy += 0.05
 
         if Dam4.rect.top == 0:
             Dam4.rect.right = number
@@ -409,7 +409,7 @@ class Obstacle8():
 
         if Dam5.rect.top > 720:
             Dam5.rect.top = 0
-            dy += 0.1
+            dy += 0.05
 
         if Dam5.rect.top == 0:
             Dam5.rect.right = number
@@ -453,7 +453,7 @@ class Obstacle9():
 
         if Dam6.rect.top > 720:
             Dam6.rect.top = 0
-            dy += 0.1
+            dy += 0.05
 
         if Dam6.rect.top == 0:
             Dam6.rect.right = number
