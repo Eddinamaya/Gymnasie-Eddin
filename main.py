@@ -14,7 +14,8 @@ SCREEN = pygame.display.set_mode((900, 720))
 pygame.display.set_caption("moto sport")
 
 # Screen-images
-menubackground = pygame.image.load("assets/mainmenubackground.png")
+menubackground = pygame.image.load("assets/pixelart_menubackground.png")
+menubackground = pygame.transform.scale(menubackground, (900,720))
 playbackground = pygame.image.load("assets/Finalbackground.png")
 playbackground = pygame.transform.scale(playbackground, (900, 720))
 restartmenu = pygame.image.load("assets/Gameover.jpg")
@@ -348,9 +349,6 @@ def main_menu():
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        MENU_TEXT = get_font(80).render("MOTO Sport", True, "#b68f40")
-        MENU_RECT = MENU_TEXT.get_rect(center=(450, 100))
-
         PLAY_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(450, 250),
                              text_input="PLAY", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
         OPTIONS_BUTTON = Button(image=pygame.image.load("assets/Options Rect.png"), pos=(450, 400),
@@ -358,7 +356,6 @@ def main_menu():
         QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(450, 550),
                              text_input="QUIT", font=get_font(75), base_color="#d7fcd4", hovering_color="White")
 
-        SCREEN.blit(MENU_TEXT, MENU_RECT)
 
         for button in [PLAY_BUTTON, OPTIONS_BUTTON, QUIT_BUTTON]:
             button.changeColor(MENU_MOUSE_POS)

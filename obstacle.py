@@ -41,7 +41,7 @@ dx = 0
 
 score = 0
 
-def get_font(size):  # Returns Press-Start-2P in the desired size
+def get_font(size):
     return pygame.font.Font("assets/font.ttf", size)
 
 
