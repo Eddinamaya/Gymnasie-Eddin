@@ -13,6 +13,12 @@ pygame.init()
 SCREEN = pygame.display.set_mode((900, 720))
 pygame.display.set_caption("moto sport")
 
+# musiken
+
+pygame.mixer.init()
+pygame.mixer.music.load("assets/spel_beat.mp3")
+pygame.mixer.music.play(-1, 0.0)
+
 # Screen-images
 menubackground = pygame.image.load("assets/boat_main.menu.png")
 menubackground = pygame.transform.scale(menubackground, (900,720))
@@ -318,16 +324,13 @@ def options():
 
         screen.blit(howtoplaybackground, (0, 0))
 
-#<<<<<<< HEAD
+
         OPTIONS_TEXT = get_font(60).render("How To Play", True, "Black")
         OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(460, 100))
-#=======
         OPTIONS_TEXT = get_font(60).render("How To Play", True, "Black")
         OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(450, 100))
-#>>>>>>> fc7305deafe0ec168b1a2dbda220c447da65c405
         SCREEN.blit(OPTIONS_TEXT, OPTIONS_RECT)
 
-        #Bild på pilarna här
 
         OPTIONS_BACK = Button(image=None, pos=(460, 600),
                               text_input="BACK", font=get_font(75), base_color="Black", hovering_color="Green")
