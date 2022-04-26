@@ -30,13 +30,13 @@ class Player():
 
         key = pygame.key.get_pressed()
         if key[pygame.K_UP]:
-            dy -= 10
+            dy -= 7
         if key[pygame.K_DOWN]:
-            dy += 10
+            dy += 7
         if key[pygame.K_LEFT]:
-            dx -= 10
+            dx -= 7
         if key[pygame.K_RIGHT]:
-            dx += 10
+            dx += 7
 
         # update player coordinates
         self.rect.x += dx
