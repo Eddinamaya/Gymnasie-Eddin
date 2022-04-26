@@ -14,12 +14,14 @@ SCREEN = pygame.display.set_mode((900, 720))
 pygame.display.set_caption("moto sport")
 
 # Screen-images
-menubackground = pygame.image.load("assets/pixelart_menubackground.png")
+menubackground = pygame.image.load("assets/boat_main.menu.png")
 menubackground = pygame.transform.scale(menubackground, (900,720))
 playbackground = pygame.image.load("assets/Finalbackground.png")
 playbackground = pygame.transform.scale(playbackground, (900, 720))
 restartmenu = pygame.image.load("assets/Gameover.jpg")
 restartmenu = pygame.transform.scale(restartmenu, (400, 300))
+howtoplaybackground = pygame.image.load("assets/how_to_play.png")
+howtoplaybackground = pygame.transform.scale(howtoplaybackground, (900, 720))
 
 # Frames per second for play
 clock = pygame.time.Clock()
@@ -311,9 +313,10 @@ def play():
 
 def options():
     while True:
+
         OPTIONS_MOUSE_POS = pygame.mouse.get_pos()
 
-        SCREEN.fill("white")
+        screen.blit(howtoplaybackground, (0, 0))
 
 #<<<<<<< HEAD
         OPTIONS_TEXT = get_font(60).render("How To Play", True, "Black")
