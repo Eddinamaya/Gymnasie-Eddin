@@ -327,9 +327,10 @@ def options():
 
         OPTIONS_TEXT = get_font(60).render("How To Play", True, "Black")
         OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(460, 100))
-        OPTIONS_TEXT = get_font(60).render("How To Play", True, "Black")
-        OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(450, 100))
+        OPTIONS_TEXT1 = get_font(30).render("Use arrows to move the boat", True, "Black")
+        OPTIONS_RECT1 = OPTIONS_TEXT1 .get_rect(center =(250, 100))
         SCREEN.blit(OPTIONS_TEXT, OPTIONS_RECT)
+        SCREEN.blit(OPTIONS_TEXT1, OPTIONS_RECT1)
 
 
         OPTIONS_BACK = Button(image=None, pos=(460, 600),
